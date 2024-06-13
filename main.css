@@ -1,0 +1,390 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .2s linear;
+}
+
+html{
+    scroll-behavior: smooth;
+    background-color: #312f2f;
+}
+
+/* Style header | navbar */
+
+header {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 25px 0;
+    background: #0f0f0f;
+    box-shadow: #000000 0 .5rem 1rem;
+
+}
+
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container h1 {
+    font-family: "Russo One", sans-serif;
+    font-weight: normal;
+    border: solid 5px;
+    border-radius: 52px;
+    padding: 5px 12px;
+    margin-right: 2%;
+    cursor: pointer;
+    color: #fcfcff;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+header .container li {
+    display: inline;
+    margin: 12px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    
+}
+
+header .container li a {
+    color: white;
+    text-decoration: none;
+}
+
+header .container li a:hover {
+    color: #ff0000
+}
+
+header .container .cadastro{
+    border: solid #fcfcff;
+    cursor: pointer;
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 8px;
+    font-size: 15px;
+}
+
+.btn-login button {
+    background-color: #6b0505;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login button:hover{
+    color: #ffffff;
+    background-color: #000000;
+}
+
+button[type="menu"] {
+    background-color: #6b0505;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+
+/* Style section home*/
+
+#home{
+    margin-top: 100px;
+    width: 100%;
+    height: 100%;
+    background: url(img/banner4.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#home img{
+    width: 700px;
+    margin-top: 10px;
+}
+
+#home .container{
+    margin-left: 2%;
+    margin-top: 6px;
+}
+/* Style section novidades*/
+
+.Titulos{
+    width: 500px;
+    text-align: center;
+    font-weight: lighter;
+    font-family: "Kanit", sans-serif;
+    padding: 16px;
+    margin: 32px 0;
+    font-size: 20px;
+    color: #fff9f9;
+    margin-top: 150px;
+    margin-left: 200px;
+    margin-bottom: 50px;
+    transform: skewX(-15deg);
+    box-shadow: #da0000 0 .2rem 2rem;
+    text-transform: uppercase;
+}
+
+.box-container img{
+    height: 400px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: #000000 0 .5rem 1rem;
+}
+
+.box-container{
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px;
+    margin-left: 15%;
+    margin-right: 10%;
+}
+
+.novidades .box-container .box:hover .imagem img{
+    transform: scale(1.2);
+}
+
+.box-container .box h3{
+    font-family: "Kanit", sans-serif;
+    font-size: 15px;
+    color: #fcfcff;
+}
+.box-container .box .preço{
+  font-family: "Kanit", sans-serif;
+  font-size: 14px;
+  color: #ff0c0c;
+  text-decoration: underline;
+}
+
+.box-container .box .conteudo{
+    margin-top: 9px;
+}
+
+/*style section produtos */
+
+.divisor{
+    margin-top: 200px;
+    margin-left: 130px;
+}
+
+.divisor img{
+    width: 100rem;
+    height: 200px;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: #000000 0 .5rem 1rem;
+}
+
+.caixa .foto img{
+    height: 300px;
+    width: 210px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: #020202 0 .10rem 2rem;
+}
+
+#Produtos .container-prod .caixa .foto .icons{
+   bottom: 0;
+   left: 0;
+   right: 0;
+   display: inline-flex;
+}
+
+#Produtos .container-prod .caixa .foto .icons a{
+    height: 50px;
+    line-height: 60px;
+    font-size: 2rem;
+    width: 80px;
+    color: #fcfcff;
+    background-color: #6b0505;
+    margin-top: 4px;
+}
+
+#Produtos .container-prod .caixa .foto .icons a:hover{
+    background-color: #000000
+}
+
+#Produtos .container-prod{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+#Produtos .container-prod .caixa{
+    flex: 0 1 30rem;
+}
+
+#Produtos .container-prod .caixa .foto{
+    text-align: center;
+    padding: 32px;
+    overflow: hidden;
+}
+
+#Produtos .container-prod .caixa .content{
+    text-align: center;
+    font-weight: lighter;
+    font-family: "Roboto", sans-serif;
+    font-size: medium;
+    color: #d4d0d0;
+    margin-top: 5px;
+    
+}
+
+#Produtos .container-prod .caixa .content .price{
+   color: #02ac0b;
+   font-family: "Roboto", sans-serif;
+   text-decoration: underline;
+   font-weight: bold;
+}
+
+#Produtos .container-prod .caixa .content .price span{
+    color: #fcfcff;
+    text-decoration: line-through;
+}
+
+/*style form */
+
+.container-form {
+    background: url(img/forrm-background.jpg);
+    background-size: cover;
+    box-shadow: 15px 15px 20px -10px #000000;
+    width: 490px;
+    height: 600px;
+    position: relative;
+    right: -80px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+
+.form-box {
+    display: flex;
+    z-index: 20;
+}
+
+.form-box img {
+    width: 590px;
+    margin-left: 200px;
+    left: 100px;
+    z-index: 1;
+    margin-bottom: 20px;
+    
+}
+
+.container-form h2{
+    margin-bottom: 40px;
+    color: #fcfcff;
+    text-align: center;
+    font-family: "Kanit", sans-serif;
+}
+
+.container-form h2 span img{
+    height: 20px;
+}
+
+.container-form label{
+    color: #fcfcff;
+    font-family: "Kanit", sans-serif;
+    font-size: small;
+}
+
+input{
+    color: #fff;
+}
+
+textarea{
+    resize: vertical;
+    color: #fcfcff;
+    border: rgba(0, 0, 0, 0.8);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: rgba(0, 0, 0, 0.8);
+  font-family:"Kanit", sans-serif; ;
+}
+
+button {
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color:#da0000;
+  } 
+
+/*aqui acaba o style */
+
+footer {
+    background-color: #464040;
+    color: #000000;
+    padding: 20px 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .container p {
+    margin: 0;
+    text-align: center;
+  }
+  
+  footer img{
+    height: 20px;
+    margin-top: 10px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
