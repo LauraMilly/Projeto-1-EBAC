@@ -1,0 +1,5 @@
+![formulario](https://github.com/LauraMilly/Projeto-1-EBAC/assets/163550002/6272a63d-b923-4be6-b08c-e1eed76f86a7)
+![Gameplay store](https://github.com/LauraMilly/Projeto-1-EBAC/assets/163550002/3b18aa94-b241-4549-85ff-31d46103bf64)
+![Lançamentos](https://github.com/LauraMilly/Projeto-1-EBAC/assets/163550002/3d2584d9-b824-4562-8ec9-de6ada0ad806)
+![mais vendidos](https://github.com/LauraMilly/Projeto-1-EBAC/assets/163550002/ec792d1c-2bec-4019-a4ea-59084d9b93f6)
+![Maisvend](https://github.com/LauraMilly/Projeto-1-EBAC/assets/163550002/cdd00f2c-b088-427e-8c45-5156fb59671e)
