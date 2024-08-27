@@ -1,26 +1,34 @@
 let currentIndex = 0;
 const slides = document.querySelectorAll('.carousel-item');
-const totalSlides = slides.length;
-const slideWidth = slides[0].clientWidth + 20; // Inclui o margin
+const totalSlides = slides.length / 2; 
+const slideWidth = slides[0].clientWidth + 20; 
+const items = document.querySelector('.carousel-items');
 
-// Função para mover o slide
+
 function moveSlide(step) {
-    const items = document.querySelector('.carousel-items');
-
     if (step === 1) {
         currentIndex = (currentIndex + 1) % totalSlides;
     } else {
         currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
     }
 
-    
     items.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+
+  
+    if (currentIndex === 0 && step === -1) {
+        items.style.transition = 'none';
+        items.style.transform = `translateX(${-totalSlides * slideWidth}px)`;
+        setTimeout(() => {
+            items.style.transition = 'transform 0.5s ease-in-out';
+        }, 20); 
+    } else if (currentIndex === totalSlides - 1 && step === 1) {
+        items.style.transition = 'none';
+        items.style.transform = `translateX(${-totalSlides * slideWidth}px)`;
+        setTimeout(() => {
+            items.style.transition = 'transform 0.5s ease-in-out';
+        }, 20); 
+    }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    const items = document.querySelector('.carousel-items');
-    items.style.transform = `translateX(0px)`;
-});
-
-// Autoplay (opcional)
-setInterval(() => moveSlide(1), 5000);
+document.querySelector('.carousel-prev').addEventListener('click', () => moveSlide(-1));
+document.querySelector('.carousel-next').addEventListener('click', () => moveSlide(1))
