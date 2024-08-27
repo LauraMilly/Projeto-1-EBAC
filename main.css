@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -13,48 +14,56 @@ html{
 /* Style header | navbar */
 
 header {
-    position:fixed;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100px;
-    padding: 25px 0;
+    height: auto; /* Ajusta a altura com base no conteúdo */
+    padding: 10px 0; /* Ajuste o padding para diferentes tamanhos de tela */
     background: #0f0f0f;
-    box-shadow: #000000 0 .5rem 1rem;
-
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* Garante que o cabeçalho fique sobre outros elementos */
 }
 
+/* Container do header */
 .container {
     max-width: 1280px;
-    width: 100%;
+    width: 90%; 
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; 
 }
 
+/* Estilo do título */
 header .container h1 {
     font-family: "Russo One", sans-serif;
     font-weight: normal;
-    border: solid 5px;
-    border-radius: 52px;
     padding: 5px 12px;
     margin-right: 2%;
     cursor: pointer;
     color: #fcfcff;
 }
 
-header .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+header .container h1 span{
+    color: #eb0b0b;
 }
 
+/* Estilo da lista */
+header .container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; 
+}
 
 header .container li {
     display: inline;
-    margin: 12px;
+    margin: 0 12px;
     font-family: "Kanit", sans-serif;
     font-weight: 300;
-    font-style: normal;
-    
 }
 
 header .container li a {
@@ -63,10 +72,11 @@ header .container li a {
 }
 
 header .container li a:hover {
-    color: #ff0000
+    color: #ff0000;
 }
 
-header .container .cadastro{
+/* Estilo dos botões */
+header .container .cadastro {
     border: solid #fcfcff;
     cursor: pointer;
     font-family: "Russo One", sans-serif;
@@ -76,7 +86,8 @@ header .container .cadastro{
     font-size: 15px;
 }
 
-.btn-login button {
+.btn-login button,
+.btn-menu button {
     background-color: #6b0505;
     color: #fff;
     border: none;
@@ -86,32 +97,22 @@ header .container .cadastro{
     transition: background-color 0.3s ease;
 }
 
-.btn-login button:hover{
+.btn-login button:hover,
+.btn-menu button:hover {
     color: #ffffff;
     background-color: #000000;
 }
-
-button[type="menu"] {
-    background-color: #6b0505;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
 
 
 /* Style section home*/
 
 #home{
-    margin-top: 100px;
     width: 100%;
     height: 100%;
     background: url(img/banner4.avif);
     background-repeat: no-repeat;
     background-size: cover;
+    margin-top: 6px;
 }
 
 #home img{
@@ -124,6 +125,11 @@ button[type="menu"] {
     margin-top: 6px;
 }
 /* Style section novidades*/
+
+.novidades {
+    margin: 100px auto; /* Espaço acima e abaixo da seção */
+    width: 100%;
+} 
 
 .Titulos{
     width: 500px;
@@ -142,41 +148,122 @@ button[type="menu"] {
     text-transform: uppercase;
 }
 
-.box-container img{
-    height: 400px;
-    border-radius: 10px;
-    cursor: pointer;
-    box-shadow: #000000 0 .5rem 1rem;
+.novidades {
+    margin: 100px auto; /* Espaço acima e abaixo da seção */
+    width: 100%;
+    position: relative;
+}
+.info {
+    text-align: center;
+    margin-top: 5px;
 }
 
-.box-container{
-    margin-top: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 45px;
-    margin-left: 15%;
-    margin-right: 10%;
-}
-
-.novidades .box-container .box:hover .imagem img{
-    transform: scale(1.2);
-}
-
-.box-container .box h3{
+.product-name {
     font-family: "Kanit", sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     color: #fcfcff;
-}
-.box-container .box .preço{
-  font-family: "Kanit", sans-serif;
-  font-size: 14px;
-  color: #ff0c0c;
-  text-decoration: underline;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding-bottom: 5px;
 }
 
-.box-container .box .conteudo{
-    margin-top: 9px;
+.product-price {
+    font-family: "Kanit", sans-serif;
+    font-size: 14px;
+    color: #ff0c0c;
+    font-weight: bold;
+
 }
+
+/* Estilo do carrossel */
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Contêiner interno do carrossel */
+.carousel-inner {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Itens do carrossel */
+.carousel-items {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 200px; 
+    margin: 10px;
+    flex: 0 0 auto;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* Tamanho fixo das imagens */
+.carousel-item img {
+    width: 200px; /* Defina o tamanho fixo desejado */
+    height: 300px; /* Defina a altura fixa desejada */
+    object-fit: cover; 
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo das informações do produto */
+.info {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.product-name {
+    font-family: "Kanit", sans-serif;
+    font-size: 16px;
+    color: #fcfcff;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding-bottom: 5px;
+}
+
+.product-price {
+    font-family: "Kanit", sans-serif;
+    font-size: 14px;
+    color: #ff0c0c;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Estilo específico dos botões do carrossel */
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 5px;
+    font-size: 1.5em;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+    background-color: rgba(209, 15, 15, 0.8);
+}
+
 
 /*style section produtos */
 
@@ -370,21 +457,34 @@ footer {
     margin-top: 10px;
   }
 
+  @media (max-width: 768px) {
+    .Titulos {
+        font-size: 1.5em;
+    }
 
+    .carousel-prev, .carousel-next {
+        font-size: 1.2em;
+        padding: 8px;
+    }
 
+    .carousel-item img {
+        width: 150px;
+        height: 225px;
+    }
+}
 
+@media (max-width: 480px) {
+    .Titulos {
+        font-size: 1.2em;
+    }
 
+    .carousel-prev, .carousel-next {
+        font-size: 1em;
+        padding: 6px;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .carousel-item img {
+        width: 120px;
+        height: 180px;
+    }
+}

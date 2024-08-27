@@ -20,7 +20,7 @@
 
 <header>
     <div class="container">
-        <h1>Gameplay <span class="material-icons"> sports_esports</span></h1>
+        <h1>Game <span>Store</span> <span class="material-icons"> sports_esports</span></h1>
             <div>
                 <nav>
                     <ul>
@@ -46,51 +46,103 @@
 </section>
 
 <!--Aqui começa a section novidades-->
-
 <section class="novidades" id="novidades">
-
-    <h1 class="Titulos"> Lançamentos </h1>
-
-    <div class="box-container">
-        <div class="box">
-            <div class="imagem">
-             <img src="img/dark-soul.jpg" alt="Dark-Soul">
-            </div>
-            <div class="conteudo">
-                <h3>Dark Soul</h3>
-                <div class="preço">R$100,00</div>
+    <h1 class="Titulos">Lançamentos</h1>
+    <div class="carousel">
+        <button class="carousel-prev" onclick="moveSlide(-1)">&#10094;</button>
+        <div class="carousel-inner">
+            <div class="carousel-items">
+                <div class="carousel-item">
+                    <img src="img/black-m-capa.webp" alt="Dark Soul">
+                    <div class="info">
+                        <h3 class="product-name">Dark Soul</h3>
+                        <div class="product-price">R$100,00</div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/dont-capa.jpg" alt="Dark Soul">
+                    <div class="info">
+                        <h3 class="product-name">Dark Soul</h3>
+                        <div class="product-price">R$100,00</div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/amnseia-capa.jpg" alt="Dark Soul">
+                    <div class="info">
+                        <h3 class="product-name">Dark Soul</h3>
+                        <div class="product-price">R$100,00</div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/Capa_de_Subnautica.png" alt="Dark Soul">
+                    <div class="info">
+                        <h3 class="product-name">Dark Soul</h3>
+                        <div class="product-price">R$100,00</div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/hades-capa.jpg" alt="Dark Soul">
+                    <div class="info">
+                        <h3 class="product-name">Dark Soul</h3>
+                        <div class="product-price">R$100,00</div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/left-for4-capa.jpg" alt="Dark Soul">
+                    <div class="info">
+                        <h3 class="product-name">Dark Soul</h3>
+                        <div class="product-price">R$100,00</div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/phasmophobia-capa.jpg" alt="Dark Soul">
+                    <div class="info">
+                        <h3 class="product-name">Dark Soul</h3>
+                        <div class="product-price">R$100,00</div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/TW3_Wild_Hunt.png" alt="Dark Soul">
+                    <div class="info">
+                        <h3 class="product-name">Dark Soul</h3>
+                        <div class="product-price">R$100,00</div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/dark-soul.jpg" alt="Dark Soul">
+                    <div class="info">
+                        <h3 class="product-name">Dark Soul</h3>
+                        <div class="product-price">R$100,00</div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/Zelda-jogo.png" alt="Zelda">
+                    <div class="info">
+                        <h3 class="product-name">Zelda: Breath of the Wild</h3>
+                        <div class="product-price">R$110,00</div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/God_of_War_2_capa.png" alt="God of War">
+                    <div class="info">
+                        <h3 class="product-name">God Of War</h3>
+                        <div class="product-price">R$95,00</div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/tlou.webp" alt="The Last Of Us">
+                    <div class="info">
+                        <h3 class="product-name">The Last Of Us</h3>
+                        <div class="product-price">R$215,00</div>
+                    </div>
+                    
+                </div>
+                <!-- Adicione mais itens conforme necessário -->
             </div>
         </div>
-        <div class="box">
-            <div class="imagem">
-             <img src="img/Zelda-jogo.png" alt="Zelda">
-            </div>
-            <div class="conteudo">
-                <h3>Zelda- Breath of the Wild</h3>
-                <div class="preço">R$110,00</div>
-            </div>
-        </div>
-        <div class="box">
-            <div class="imagem">
-             <img src="img/God_of_War_2_capa.png" alt="Dark-Soul">
-            </div>
-            <div class="conteudo">
-                <h3>God Of War</h3>
-                <div class="preço">R$95,00</div>
-            </div>
-        </div>
-        <div class="box">
-            <div class="imagem">
-             <img src="img/tlou.webp" alt="Dark-Soul">
-            </div>
-            <div class="conteudo">
-                <h3>The Last Of Us</h3>
-                <div class="preço">R$215,00</div>
-            </div>
-        </div>
+        <button class="carousel-next" onclick="moveSlide(1)">&#10095;</button>
     </div>
 </section>
-
 <!--Aqui começa a section produtos-->
 
 <div class="divisor">
@@ -280,6 +332,6 @@
     </div>
   </footer>
 
-
+  <script src="script.js"></script>
 </body>
 </html>
