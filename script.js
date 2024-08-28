@@ -1,7 +1,7 @@
 let currentIndex = 0;
 const slides = document.querySelectorAll('.carousel-item');
-const totalSlides = slides.length / 2; 
-const slideWidth = slides[0].clientWidth + 20; 
+const totalSlides = slides.length; // Total de slides
+const slideWidth = slides[0].clientWidth + 20; // Largura do slide + margem
 const items = document.querySelector('.carousel-items');
 
 
@@ -14,7 +14,7 @@ function moveSlide(step) {
 
     items.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
 
-  
+   
     if (currentIndex === 0 && step === -1) {
         items.style.transition = 'none';
         items.style.transform = `translateX(${-totalSlides * slideWidth}px)`;
@@ -30,5 +30,6 @@ function moveSlide(step) {
     }
 }
 
+
 document.querySelector('.carousel-prev').addEventListener('click', () => moveSlide(-1));
-document.querySelector('.carousel-next').addEventListener('click', () => moveSlide(1))
+document.querySelector('.carousel-next').addEventListener('click', () => moveSlide(1));

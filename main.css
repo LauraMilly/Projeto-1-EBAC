@@ -8,7 +8,7 @@
 
 html{
     scroll-behavior: smooth;
-    background-color: #312f2f;
+    background-color: #030303;
 }
 
 /* Style header | navbar */
@@ -18,22 +18,21 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: auto; 
-    padding: 10px 0;  
-    background: #0f0f0f;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.5);
-    z-index: 1000; 
+    height: auto;
+    padding: 10px 0;
+    background: #000000;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.3); 
+    z-index: 1000;
 }
 
-/* Container do header */
 .container {
     max-width: 1280px;
-    width: 90%; 
+    width: 90%;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 
 header .container h1 {
@@ -45,48 +44,40 @@ header .container h1 {
     color: #fcfcff;
 }
 
-header .container h1 span{
-    color: #eb0b0b;
+header .container h1 span {
+    color: #650379;
 }
 
-
-header .container ul {
+header nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 
-header .container li {
-    display: inline;
+header nav li {
     margin: 0 12px;
     font-family: "Kanit", sans-serif;
     font-weight: 300;
 }
 
-header .container li a {
-    color: white;
+header nav li a {
+    color: #fff;
     text-decoration: none;
 }
 
-header .container li a:hover {
-    color: #ff0000;
+header nav li a:hover {
+    color: #650379;
 }
 
-header .container .cadastro {
-    border: solid #fcfcff;
-    cursor: pointer;
-    font-family: "Russo One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    margin: 8px;
-    font-size: 15px;
+header .btn-login {
+    display: flex;
+    gap: 10px;
 }
 
-.btn-login button,
-.btn-menu button {
-    background-color: #6b0505;
+.btn-login button {
+    background-color: #650379;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -95,29 +86,23 @@ header .container .cadastro {
     transition: background-color 0.3s ease;
 }
 
-.btn-login button:hover,
-.btn-menu button:hover {
+.btn-login button:hover {
     color: #ffffff;
     background-color: #000000;
 }
 
-#home{
+
+section#home {
     width: 100%;
-    height: 100%;
-    background: url(img/banner4.avif);
-    background-repeat: no-repeat;
+    height: 60vh;
+    background: url('img/banner65-.jpg') no-repeat center center;
     background-size: cover;
-    margin-top: 6px;
-}
-
-#home img{
-    width: 700px;
-    margin-top: 10px;
-}
-
-#home .container{
-    margin-left: 2%;
-    margin-top: 6px;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    position: relative;
 }
 /* Style section novidades*/
 
@@ -139,7 +124,7 @@ header .container .cadastro {
     margin-left: 200px;
     margin-bottom: 150px;
     transform: skewX(-15deg);
-    box-shadow: #da0000 0 .2rem 2rem;
+    box-shadow: #650379 0 .2rem 2rem;
     text-transform: uppercase;
 }
 
@@ -166,13 +151,15 @@ header .container .cadastro {
 .product-price {
     font-family: "Kanit", sans-serif;
     font-size: 14px;
-    color: #ff0c0c;
+    color: #650379;
     font-weight: bold;
 }
 
 .carousel {
     position: relative;
-    width: 100%;
+    width: 80%; 
+    max-width: 1400px; 
+    margin: 0 auto; 
     overflow: hidden;
 }
 
@@ -232,7 +219,7 @@ header .container .cadastro {
 .product-price {
     font-family: "Kanit", sans-serif;
     font-size: 14px;
-    color: #ff0c0c;
+    color: #650379;
     font-weight: bold;
     text-decoration: underline;
 }
@@ -241,7 +228,7 @@ header .container .cadastro {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(151, 21, 184, 0.616);
     color: #fff;
     border: none;
     padding: 10px;
@@ -260,39 +247,31 @@ header .container .cadastro {
 }
 
 .carousel-prev:hover, .carousel-next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #650379;
 }
-
-
 
 /*style section produtos */
 
-.divisor{
-    margin-top: 20px;
-    margin-left: 130px;
-    margin: 0 auto; 
-    width: fit-content; 
-    text-align: center; 
+.divisor {
+    margin: 20px auto;
+    width: fit-content;
+    text-align: center;
 }
 
-.divisor img{
-    width: 100rem;
-    height: 200px;
+.divisor img {
+    width: 100%;
+    max-width: 10000px;
+    height: auto;
     border-radius: 15px;
     cursor: pointer;
-    max-height: 200px; 
-    border-radius: 15px; 
-    cursor: pointer; 
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.5); 
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
-    box-shadow: #000000 0 .5rem 1rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .divisor img:hover {
     transform: scale(1.05);
-    box-shadow: 0 .8rem 1.5rem rgba(0, 0, 0, 0.7); 
+    box-shadow: 0 .8rem 1.5rem rgba(0, 0, 0, 0.7);
 }
-
 .caixa .btn-container {
     display: flex;
     justify-content: center;
@@ -302,9 +281,9 @@ header .container .cadastro {
 
 .btn-buy,
 .btn-details {
-    background-color: #6e0303; 
+    background-color: #650379; 
     border: none;
-    color: #fff; /* Cor do texto dos botões */
+    color: #fff; 
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -314,14 +293,14 @@ header .container .cadastro {
 
 .btn-buy:hover,
 .btn-details:hover {
-    background-color: #a81401; 
+    background-color: #650379; 
 }
 #Produtos {
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Estilos para o container de produtos */
+
 .container-prod {
     display: flex;
     flex-wrap: wrap;
@@ -336,8 +315,7 @@ header .container .cadastro {
 
 
 .caixa {
-    background: rgba(255, 255, 255, 0.034);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    background: #110920;
     backdrop-filter: blur(13.5px);
     -webkit-backdrop-filter: blur(13.5px);
     border-radius: 8px;
@@ -345,13 +323,13 @@ header .container .cadastro {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     color: #fff;
     overflow: hidden; 
-    flex: 1 1 calc(25% - 20px); 
+    flex: 1 2 calc(25% - 20px); 
     box-sizing: border-box; 
 }
 
 .caixa:hover {
     transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 9px rgba(0, 0, 0, 0.2);
 }
 
 .caixa .foto {
@@ -388,7 +366,8 @@ header .container .cadastro {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #6b0505;
+    background-color: #0a0920;
+    border: 1px solid #650379;
     color: #fff;
     font-size: 1.5rem;
     transition: background-color 0.3s ease;
@@ -425,7 +404,7 @@ header .container .cadastro {
 }
 
 .caixa .content .rating .star {
-    color: #a00707; 
+    color: #650379; 
     font-size: 1.25rem;
 }
 
@@ -438,119 +417,277 @@ header .container .cadastro {
 
 .caixa .content .price span {
     font-size: small;
-    color: #f30b0b;
+    color: #650379;
     text-decoration: line-through;
 }
 
 
 /*style form */
 
-.container-form {
-    background: url(img/forrm-background.jpg);
-    background-size: cover;
-    box-shadow: 15px 15px 20px -10px #000000;
-    width: 490px;
-    height: 600px;
+#contato {
+    padding: 60px 10%;
+    text-align: center;
     position: relative;
-    right: -80px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 10px;
-    margin-top: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-bottom: 50px;
 }
 
+.container-centralizado {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-bottom: 40px;
+}
 
 .form-box {
     display: flex;
-    z-index: 20;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: stretch;
+    justify-content: center;
 }
 
-.form-box img {
-    width: 590px;
-    margin-left: 200px;
-    left: 100px;
-    z-index: 1;
-    margin-bottom: 20px;
-    
+.map-container {
+    flex: 1.7;
+    max-width: 100%;
+    min-width: 450px;
+    width: 65%;
+    display: flex;
+    align-items: center;
 }
 
-.container-form h2{
-    margin-bottom: 40px;
-    color: #fcfcff;
-    text-align: center;
+.map-container iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container-form {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container-form h2 {
+    margin-bottom: 30px;
+    color: #fff;
     font-family: "Kanit", sans-serif;
+    font-size: 1.5rem;
 }
 
-.container-form h2 span img{
-    height: 20px;
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
 }
 
-.container-form label{
-    color: #fcfcff;
+.form-group label {
+    display: block;
     font-family: "Kanit", sans-serif;
-    font-size: small;
-}
-
-input{
+    font-size: 1rem;
+    margin-bottom: 5px;
     color: #fff;
 }
 
-textarea{
-    resize: vertical;
-    color: #fcfcff;
-    border: rgba(0, 0, 0, 0.8);
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-bottom: 2px solid #650379;
+    border-radius: 0;
+    background-color: transparent;
+    color: #fff;
+    font-size: 1rem;
+    box-sizing: border-box;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
-  width: 100%;
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  box-sizing: border-box;
-  border: rgba(0, 0, 0, 0.8);
-  font-family:"Kanit", sans-serif; ;
+.form-group-button {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
 }
 
-button {
-    padding: 10px 20px;
-    background: rgba(0, 0, 0, 0.2);
+.form-group-button button {
+    background-color: #650379;
     color: #fff;
     border: none;
+    padding: 12px 20px;
     border-radius: 5px;
     cursor: pointer;
-  }
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
 
-  button:hover {
-    background-color:#da0000;
-  } 
+.form-group-button button:hover {
+    background-color: #4a003b;
+}
 
 /*aqui acaba o style */
-
 footer {
-    background-color: #464040;
-    color: #000000;
-    padding: 20px 0;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  .container p {
-    margin: 0;
+    background-color: #110920; 
+    color: #fff; 
+    padding: 20px 0; 
+    position: relative;
+    width: 100%;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); 
+}
+
+footer .container {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 15px; 
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; 
+    flex-wrap: wrap; 
+    margin-bottom: 20px; 
+}
+
+.footer-left {
+    flex: 1; 
+    text-align: center; 
+    margin-right: 100px; 
+}
+
+.footer-left .address {
+    margin-top: 10px; 
+    font-size: 20px; 
+}
+
+.footer-right {
+    flex: 1; 
     text-align: center;
-  }
-  
-  footer img{
-    height: 20px;
+}
+
+.footer-right p {
+    margin-bottom: 10px; 
+    font-size: 20px; 
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center; 
+}
+
+.social-icons img {
+    width: 44px; 
+    height: 44px; 
+    transition: opacity 0.3s ease; 
+}
+
+.social-icons img:hover {
+    opacity: 0.8; 
+}
+
+.footer-apps {
+    text-align: center;
+    margin-right: 10px;
     margin-top: 10px;
-  }
+}
+
+.footer-apps p {
+    margin-bottom: 5px; 
+    font-size: 20px; 
+}
+
+.app-icons {
+    display: flex;
+    justify-content: center; 
+    gap: 15px; 
+}
+
+.app-icons a {
+    display: flex; 
+    align-items: center; 
+}
+
+.app-icons img {
+    width: 120px; 
+    height: auto; 
+    transition: opacity 0.3s ease; 
+}
+
+.app-icons img:hover {
+    opacity: 0.8; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    header .container h1 {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav li {
+        margin: 10px 0;
+    }
+
+    .btn-login {
+        margin-top: 10px;
+        flex-direction: column;
+    }
+
+    .btn-login button {
+        margin: 5px 0;
+    }
 
   @media (max-width: 768px) {
     .Titulos {
@@ -630,4 +767,96 @@ footer {
     .caixa .content .des {
         font-size: 0.75rem; 
     }
+}
+
+@media (max-width: 1200px) {
+    .caixa {
+        flex: 1 2 calc(33.33% - 20px);
+    }
+}
+
+@media (max-width: 800px) {
+    .caixa {
+        flex: 1 2 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 500px) {
+    .caixa {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .map-container {
+        width: 60%;
+    }
+
+    .container-form {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 992px) {
+    .map-container {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .form-box {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    #contato {
+        padding: 60px 5%;
+    }
+
+    .map-container iframe {
+        height: 300px;
+    }
+
+    .container-form h2 {
+        font-size: 1.25rem;
+    }
+
+    .form-group input, .form-group textarea {
+        font-size: 0.875rem;
+    }
+
+    .form-group-button button {
+        font-size: 0.875rem;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    .footer-left, .footer-right {
+        flex: 1 100%; 
+        margin: 10px 0; 
+    }
+
+    .footer-right {
+        order: 2; 
+    }
+
+    .footer-apps {
+        margin-top: 20px; 
+    }
+
+    .social-icons, .app-icons {
+        flex-direction: column; 
+    }
+
+    .social-icons a, .app-icons a {
+        margin-bottom: 10px; 
+    }
+}
 }
