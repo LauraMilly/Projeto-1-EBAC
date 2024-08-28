@@ -1,1 +1,2 @@
-![Gameplay store](https://github.com/LauraMilly/Projeto-1-EBAC/assets/163550002/6b20d744-d754-488b-b571-51198a0b1715)
+
+![game-playnew](https://github.com/user-attachments/assets/76228626-6249-4bd7-b2a9-6b1e845735fc)
