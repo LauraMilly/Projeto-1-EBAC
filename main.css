@@ -293,7 +293,7 @@ section#home {
 
 .btn-buy:hover,
 .btn-details:hover {
-    background-color: #650379; 
+    background-color: #1b0120; 
 }
 #Produtos {
     margin: 0 auto;
@@ -348,6 +348,7 @@ section#home {
 
 .caixa .foto img:hover {
     transform: scale(1.1);
+    cursor: pointer;
 }
 
 .caixa .foto .icons {
@@ -375,7 +376,7 @@ section#home {
 }
 
 .icon-link:hover {
-    background-color: #000;
+    background-color: #650379;
 }
 
 .caixa .content {
